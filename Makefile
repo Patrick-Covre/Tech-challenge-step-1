@@ -1,8 +1,9 @@
-.PHONY: lint format test run ALL
+.PHONY: lint format test run mlflow mlflow-ui ALL
 
 POETRY = poetry
 RUFF = $(POETRY) run ruff
 PYTEST = $(POETRY) run pytest
+MLFLOW = $(POETRY) run mlflow
 
 ALL: lint test
 
@@ -18,3 +19,11 @@ test:
 run:
 	@echo "=== Iniciando a Aplicação ==="
 	$(POETRY) run python src/main.py
+
+mlflow:
+	@echo "=== Executando o MLflow no ambiente do Poetry ==="
+	$(MLFLOW) $(ARGS)
+
+mlflow-ui:
+	@echo "=== Iniciando a interface do MLflow no ambiente do Poetry ==="
+	$(MLFLOW) ui $(ARGS)

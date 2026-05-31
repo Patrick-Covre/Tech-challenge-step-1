@@ -45,6 +45,7 @@ data/processed/
 mlruns/
 mlartifacts/
 mlruns.db
+mlflow.db
 
 # ==========================================
 # 5. Variáveis de Ambiente e Segredos
