@@ -46,6 +46,8 @@ mlruns/
 mlartifacts/
 mlruns.db
 mlflow.db
+# Modelos PyTorch locais
+*.pth
 
 # ==========================================
 # 5. Variáveis de Ambiente e Segredos
