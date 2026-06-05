@@ -19,17 +19,16 @@ ENV/
 # ==========================================
 .ruff_cache/
 .pytest_cache/
+.mypy_cache/
 .coverage
 htmlcov/
 .tox/
-poetry.lock
-
 
 # ==========================================
 # 4. Machine Learning & Jupyter Notebooks
 # ==========================================
 .ipynb_checkpoints/
-# Ignorar bases de dados locais e ficheiros pesados 
+# Ignorar bases de dados locais e ficheiros pesados
 *.csv
 *.parquet
 *.json
@@ -41,13 +40,16 @@ data/processed/
 *.h5
 *.pt
 *.onnx
-# Mlflow
+# MLflow
 mlruns/
 mlartifacts/
 mlruns.db
 mlflow.db
 # Modelos PyTorch locais
 *.pth
+# CatBoost
+src/notebooks/catboost_info/
+catboost_info/
 
 # ==========================================
 # 5. Variáveis de Ambiente e Segredos
@@ -71,3 +73,11 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 .DS_Store
+
+# ==========================================
+# 8. Distribuição e Build
+# ==========================================
+*.egg-info/
+dist/
+build/
+.eggs/
