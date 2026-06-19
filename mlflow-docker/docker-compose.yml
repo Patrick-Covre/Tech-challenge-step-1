@@ -96,10 +96,7 @@ services:
         - MLFLOW_ARTIFACT_URI=s3://mlflow-artifacts/
     volumes:
         # Monta as pastas do seu projeto (que estão em ../src/)
-        - ../src/notebooks:/home/jarvis/notebooks
-        - ../src/data:/home/jarvis/data
-        - ../src/models:/home/jarvis/models
-        - ../src/docs:/home/jarvis/docs
+        - ../:/home/jarvis/
     ports:
         - "8888:8888"
     depends_on:
