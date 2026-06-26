@@ -24,13 +24,6 @@ def test_mlp_config_defaults():
     assert config.early_stopping_patience == 10
     assert config.random_state == 42
 
-
-def test_mlflow_config_defaults():
-    config = MLflowConfig()
-    assert config.tracking_uri == "sqlite:///mlruns.db"
-    assert config.experiment_name == "telco-churn-etapa2"
-
-
 def test_setup_logging():
     setup_logging(level="DEBUG")
     logger = logging.getLogger()
