@@ -1,7 +1,7 @@
 import logging
 from pathlib import Path
 
-from src.config import DataConfig, MLflowConfig, MLPConfig, setup_logging
+from src.config import DataConfig, MLPConfig, setup_logging
 
 
 def test_data_config_defaults():
